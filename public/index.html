@@ -1,9 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>ToDo List - TS</title>
+    <style>
+        body {
+            font-family: "Nunito", serif;
+        }
+        #toggleMode, #submit, legend {
+            font-weight: 600;
+        }
+        input, button, select {
+            padding-left: 0.8vw;
+            padding-right: 0.8vw;
+            border-radius: 5vw;
+            border-width: 1.8px;
+            border-color: #c3c3c3;
+            background-color: #f1f9ff;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -14,7 +33,7 @@
                 <legend>TODO:</legend>
                 <label for="todoDescription">Description:</label>
                 <input type="text" name="todoDescription" required />
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit">Submit</button>
             </fieldset>
 
             <fieldset id="reminderSet" style="display: none;" disabled>
@@ -27,10 +46,10 @@
                 <label for="notifications">Notify by:</label>
                 <select name="notifications">
                     <option value="SMS">SMS</option>
-                    <option value="EMAIL">EMAIL</option>
+                    <option value="EMAIL">E-mail</option>
                     <option value="PUSH_NOTIFICATION">Push notification</option>
                 </select>
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit">Submit</button>
             </fieldset>
         </form>
     </div>
