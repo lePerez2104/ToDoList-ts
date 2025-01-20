@@ -40,7 +40,7 @@
             this.notifications = notifications;
         }
         Reminder.prototype.render = function () {
-            return "\n            ---> Reminder <---\n            description: ".concat(this.description, "\n            date: ").concat(dateUtils.formatDate(this.date), "\n            platform: ").concat(this.notifications.join(', '), "\n            ");
+            return "\n            --|    Reminder    |--\n            description: ".concat(this.description, "\n            date: ").concat(dateUtils.formatDate(this.date), "\n            platform: ").concat(this.notifications.join(', '), "\n            ");
         };
         return Reminder;
     }());

@@ -53,7 +53,7 @@
 
         render(): string {
             return `
-            ---> Reminder <---
+            --|    Reminder    |--
             description: ${this.description}
             date: ${dateUtils.formatDate(this.date)}
             platform: ${this.notifications.join(', ')}
